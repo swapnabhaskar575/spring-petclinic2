@@ -2,7 +2,7 @@ version: 0.2
 env:
   secrets-manager:
     LOGIN: prod/sonar:ecdb8a9a65eab5d2e8b0e2259f04df6807592cac
-    HOST: prod/sonar:HOST
+    HOST: prod/sonar:https://sonarcloud.io
     Organization: prod/sonar:swapnabhaskar575
     Project: prod/sonar:spring-petclinic
 phases:
