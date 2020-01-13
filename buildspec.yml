@@ -4,7 +4,7 @@ env:
     LOGIN: prod/sonar:ecdb8a9a65eab5d2e8b0e2259f04df6807592cac
     HOST: prod/sonar:https://sonarcloud.io
     Organization: prod/sonar:swapnabhaskar575
-    Project: prod/sonar:spring-petclinic
+    Project: prod/sonar:spring-petclinic2
 phases:
     build:
     commands:
