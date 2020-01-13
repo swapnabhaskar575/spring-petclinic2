@@ -1,7 +1,7 @@
 version: 0.2
 env:
   secrets-manager:
-    LOGIN: prod/sonar:sonartoken
+    LOGIN: prod/sonar:ecdb8a9a65eab5d2e8b0e2259f04df6807592cac
     HOST: prod/sonar:HOST
     Organization: prod/sonar:Organization
     Project: prod/sonar:Project
