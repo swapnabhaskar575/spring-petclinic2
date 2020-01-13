@@ -50,6 +50,13 @@
         <jacoco.utReport>${project.build.directory}/jacoco.exec</jacoco.utReport>
         <jacoco.utAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.utReport}</jacoco.utAgentConfig>
         <jacoco-listeners.version>3.5</jacoco-listeners.version>
+	 
+	<!--sonar dependencies -->
+        <sonar.projectKey>swapnabhaskar575_spring-petclinic2</sonar.projectKey>
+        <sonar.organization>swapnabhaskar575</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>9e427ae9abde4e90caa6f8c7eaf0609adae86e8c</sonar.login>
+   
 
     </properties>
 
