@@ -1,17 +1,17 @@
 version: 0.2
 	
-	phases:
-	  build:
-	    commands:
-	      - echo Build started on `date`
-	      - mvn clean install
-	      - mvn test
-	  post_build:
-	    commands:
-	      - echo Build completed on `date`
-	      - mvn package
-	      - mv target/petclinic.war petclinic.war
-	      - mvn surefire-report:report
+   phases:
+       build:
+	 commands:
+	   - echo Build started on `date`
+	   - mvn clean install
+	   - mvn test
+	post_build:
+	 commands:
+	   - echo Build completed on `date`
+	   - mvn package
+	   - mv target/petclinic.war petclinic.war
+	   - mvn surefire-report:report
 	     
 	artifacts:
 	  files:
