@@ -10,13 +10,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn package
-      - mv target/petclinic.war petclinic.war
       - mvn surefire-report:report
-     
-artifacts:
-  files:
-      - petclinic.war
-      - .ebextensions/**/*
+
 reports: #New
   SurefireReports: # CodeBuild will create a report group called "SurefireReports".
      files: #Store all of the files
