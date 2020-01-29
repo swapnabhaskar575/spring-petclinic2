@@ -1,18 +1,26 @@
 version: 0.2
-
-phases:
-  build:
-    commands:
-      - echo Build started on `date`
-      - mvn clean install
-      - mvn test
-      - mvn surefire-report:report
-reports: #New
-  SurefireReports: # CodeBuild will create a report group called "SurefireReports".
-     files: #Store all of the files
-      - '**/*'
-     base-directory: 'target/surefire-reports' # Location of the reports  
-  post_build:
-    commands:
-      - echo Build completed on `date`
-      - mvn package
+	
+	phases:
+	  build:
+	    commands:
+	      - echo Build started on `date`
+	      - mvn clean install
+	      - mvn test
+	  post_build:
+	    commands:
+	      - echo Build completed on `date`
+	      - mvn package
+	      - mv target/petclinic.war petclinic.war
+	      - mvn surefire-report:report
+	     
+	artifacts:
+	  files:
+	      - petclinic.war
+	      - .ebextensions/**/*
+	reports: #New
+	  SurefireReports: # CodeBuild will create a report group called "SurefireReports".
+	     files: #Store all of the files
+	      - '**/*'
+	     base-directory: 'target/surefire-reports' 
+		 
+		 version: 0.2
